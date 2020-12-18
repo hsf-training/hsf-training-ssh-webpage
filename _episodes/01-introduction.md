@@ -89,7 +89,7 @@ this is also what we use for SSH connections.
 > key remains private. If someone gains access to your private key they can
 > impersonate you in the digital world and get access to a lot of your
 > resources.
-{: .callout }
+{: .caution }
 
 
 {% include links.md %}

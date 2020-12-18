@@ -49,12 +49,12 @@ impatient you can also press ``Ctrl-D`` as a shortcut.
 
 > ## Warning: Long runing jobs
 > Don't run long-running and CPU or memory heavy jobs on login nodes like
-> KEKCC and DESY where they have a dedicated batch systems (e.g.
-> :ref:`onlinebook_gbasf2`, :ref:`LSF <onlinebook_bsub>` or
-> :ref:`onlinebook_htcondor`). The login nodes are shared
+> we just used.
+> The login nodes are shared
 > resources for all users and it's not very polite and mostly also not
 > permitted to occupy them with calculations that could be done on dedicated
 > machines.
+> You probably have access to batch systems to submit resource intensive jobs!
 {: .callout}
 
 > ## Exercise
@@ -65,7 +65,7 @@ impatient you can also press ``Ctrl-D`` as a shortcut.
 > ## One final thing about host keys
 > After you connected to a server, ssh
 > remembers the host key and will verify it on each connection. So you might
-> see something like this::
+> see something like this:
 >
 >     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 >     @    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
@@ -155,10 +155,10 @@ KEK network is rather complex so a very simplified layout is shown in
    Very simplified layout of the KEK network.
 
 
-.. note::
-   It is possible for your home institute to get direct access to KEK network so
-   you might not be affected by this restriction while at work.
-
+> ## Note
+> It is possible for your home institute to get direct access to KEK network so
+> you might not be affected by this restriction while at work.
+{: .callout}
 
 So unless you are using VPN or are at KEK you most likely need to connect to the
 gateway servers first, either ``sshcc1.kek.jp`` or ``sshcc2.kek.jp``
@@ -167,9 +167,9 @@ gateway servers first, either ``sshcc1.kek.jp`` or ``sshcc2.kek.jp``
 ssh username@sshcc1.kek.jp
 ```
 
-.. warning::
-
-    Your username on KEKCC is not necessarily the same as your DESY username.
+> ## Warning
+> Your username on KEKCC is not necessarily the same as your DESY username.
+{: .callout}
 
 and once this connection is established you can login to KEKCC from this gateway
 server.
@@ -189,3 +189,21 @@ Now you should be connected to KEKCC but you needed to enter two commands. And
 trying to copy files from KEKCC to your home machine becomes very complicated as
 you would have copy them in multiple steps as well so this is clearly not yet
 the optimal solution.
+
+## Debugging
+
+
+If you run into trouble in one of the following sections it can be very
+instructive to switch on debugging output by using the ``-v`` option of ssh:
+
+```bash
+ssh -v username@servername
+```
+
+Once you have created a configuration file (next section) it can also sometimes
+be helpful to disable it to rule out this source of error. This can be done
+by using the `-F` option to specify a blank config file:
+
+```bash
+sh -F /dev/null username@servername
+```
