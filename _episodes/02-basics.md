@@ -126,7 +126,7 @@ directory on ``bastion.desy.de``.
 > ## Exercise
 > How can we copy full directories with all files at once?
 > > ## Hint
-> > Try `man ssh`
+> > Try `man ssp`
 > {: .solution}
 > > ## Solution
 > > Supply ``-r`` to scp: ``scp -r desy:~/plots .`` will try to copy the full

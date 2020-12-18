@@ -117,8 +117,7 @@ be frustrating if it is a long-running process such compilation or a dataset
 download.
 
 To avoid this you can use a [terminal multiplexer](https://en.wikipedia.org/wiki/Terminal_multiplexer>)
-program such as [GNU
-screen](https://www.gnu.org/software/screen/) or the newer and more
+program such as [GNU screen](https://www.gnu.org/software/screen/) or the newer and more
 feature-rich [tmux](https://github.com/tmux/tmux/wiki).
 Both are
 pre-installed on KEKCC and NAF.
@@ -144,20 +143,20 @@ session. A terminal multiplexer allows for example to
   for running a process in one pane and monitoring the processor load via
   [htop](<https://htop.dev/)
 
-
-.. figure:: tmux_on_kekcc.png
-   :width: 40em
-   :align: center
-
-   Tmux running in the local terminal and on KEKCC with multiple windows and
-   panes.
+<figure>
+<img src="{{site.baseurl}}/fig/tmux_on_kekcc.png"/>
+<figcaption>
+  Tmux running in the local terminal and on KEKCC with multiple windows and
+  panes.
+</figcaption>
+</figure>
 
 If you don't know either programs yet: learn how to use (the newer) tmux.
-Check out the official `getting started guide
-<https://github.com/tmux/tmux/wiki/Getting-Started>`_ from its `wiki
-<https://github.com/tmux/tmux/wiki>`_ or one of the various googable online
-guides such as `this one <https://linuxhandbook.com/tmux/>`_. And I also
-recommend keeping a `cheat sheet <https://tmuxcheatsheet.com>`_ in your
+Check out the official [getting started guide](https://github.com/tmux/tmux/wiki/Getting-Started)
+ from its [wiki](https://github.com/tmux/tmux/wiki)
+ or one of the various googable online
+guides such as [this one](https://linuxhandbook.com/tmux/). And I also
+recommend keeping a [cheat sheet](https://tmuxcheatsheet.com) in your
 bookmarks. The commands that you need for the most basic use-case are
 
 * `tmux new-session`: Creates and attaches a new tmux session. This is also the default behaviour
