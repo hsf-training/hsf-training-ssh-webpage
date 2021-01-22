@@ -2,6 +2,7 @@ HSF Training SSH
 ==============
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 An introduction to SSH. This repository holds the source code of the webpage that is rendered [here](https://hsf-training.github.io/hsf-training-ssh-webpage/). Contributions are welcome (see below)!
@@ -30,8 +31,15 @@ the content of the lesson:
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
-<!-- markdownlint-enable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/daritter"><img src="https://avatars.githubusercontent.com/u/1186338?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Martin Ritter</b></sub></a><br /><a href="#content-daritter" title="Content">🖋</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 Even more people contributed to the framework, but they are too many to list!
