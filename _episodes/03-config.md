@@ -25,32 +25,25 @@ configuration option followed by it's value. For example, to send periodic
 status updates which might help keep connections from disconnecting we can
 simply write the following in the file:
 
-.. literalinclude:: ssh_config.txt
-   :lines: 10-11
-   :linenos:
+{% include includeconfiglines filename='code/ssh_config.txt' start=10 stop=11 %}
 
 But more importantly we can also define "hosts" to connect to and settings that
 should only apply for these hosts
 
-.. literalinclude:: ssh_config.txt
-   :lines: 13-15
-   :linenos:
+{% include includeconfiglines filename='code/ssh_config.txt' start=13 stop=15 %}
 
 This now allows us to just execute ``ssh desy`` and the correct username and
 full hostname are taken from the configuration file. This will also work with
 ``scp`` so now you can just use the shorter version
 
-.. code-block::
-
-    scp desy:/etc/mtod bastion-message
+```bash
+scp desy:/etc/mtod bastion-message
+```
 
 to copy a file from the desy login server. This now also allows us to automate
 the login to KEKCC via the gateway server
 
-.. literalinclude:: ssh_config.txt
-   :lines: 17-25
-   :emphasize-lines: 6
-   :linenos:
+{% include includeconfiglines filename='code/ssh_config.txt' start=17 stop=25 %}
 
 The line containing ``ProxyJump`` tells ssh to not directly connect to the host
 but first connect to the gateway host and then connect from there. We could make
