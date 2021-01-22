@@ -57,7 +57,7 @@ anywhere.
 > ## Warning!
 > If you already have a key in your `.ssh` directory this might overwrite
 > the existing key and cause problems on existing logins. Only overwrite the
-> existing key if you are sure you don't need the old one
+> existing key if you are sure you don't need the old one.
 {: .caution}
 
 Next, it will ask you for a passphrase to protect the key. While technically you
@@ -69,43 +69,31 @@ Don't worry, you don't have to type it all the time.
 After that it should just print some information on the key. Congratulations,
 you have created your very own SSH identity.
 
-.. admonition:: Question
-   :class: exercise stacked
+> ## Question
+> Where is the public key stored?
+> > ## Hint
+> > Check the output of `ssh-keygen`
+> {: .solution}
+> > ## Solution
+> > In a file with the same name as the private key but `.pub` in the end.
+> {: .solution}
+{: .challenge}
 
-   Where is the public key stored?
-
-.. admonition:: Hint
-   :class: toggle xhint stacked
-
-   Check the output of `ssh-keygen`
-
-.. admonition:: Solution
-   :class: toggle solution
-
-   In a file with the same name as the private key but `.pub` in the end.
-
-
-.. admonition:: Question (optional)
-   :class: exercise stacked
-
-   The default key type is to use "rsa". What types are possible for a key?
-
-.. admonition:: Hint
-   :class: toggle xhint stacked
-
-   Try `man ssh-keygen` or for more information google "ssh key types"
-
-.. admonition:: Solution
-   :class: toggle solution
-
-   There should be `RSA <https://en.wikipedia.org/wiki/RSA_(cryptosystem)>`_,
-   `DSA <https://en.wikipedia.org/wiki/Digital_Signature_Algorithm>`_, `ECDSA
-   <https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm>`_
-   and `Ed25519 <https://en.wikipedia.org/wiki/Curve25519>`_
-
-   However, DSA has been found unsafe and there are some concerns about ECDSA so
-   the only real options are RSA and Ed25519. Ed25519 was added later and should
-   be more secure but is not supported on very old versions of SSH.
+> ## Question (optional)
+> The default key type is to use "rsa". What types are possible for a key?
+> > ## Hint
+> > Try `man ssh-keygen` or for more information google "ssh key types"
+> {: .solution}
+> > ## Solution
+> > There should be [RSA](https://en.wikipedia.org/wiki/RSA_(cryptosystem)),
+> > [DSA](https://en.wikipedia.org/wiki/Digital_Signature_Algorithm),
+> > [ECDSA](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm>`)
+> > and [Ed25519](https://en.wikipedia.org/wiki/Curve25519>).
+> > However, DSA has been found unsafe and there are some concerns about ECDSA so
+> > the only real options are RSA and Ed25519. Ed25519 was added later and should
+> > be more secure but is not supported on very old versions of SSH.
+> {: .solution}
+{: .challenge}
 
 ## Using your new key
 
