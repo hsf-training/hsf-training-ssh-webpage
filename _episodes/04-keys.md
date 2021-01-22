@@ -15,7 +15,6 @@ keypoints:
 - "Agent forwarding can be used to make your local private keys available on
   the server you connect."
 - "`ssh-add` allows you to add, list or remove identities from the agent"
-
 ---
 
 As you have seen there is a lot of entering your password, especially when
@@ -104,10 +103,7 @@ which identity to use with the `-i` parameter each time you run it, the best way
 to do this is again the configuration file. You can even tell ssh to not try to
 use the password at all but just the listed keys.
 
-.. literalinclude:: ssh_config.txt
-   :lines: 24-27
-   :emphasize-lines: 3-4
-   :linenos:
+{% include includeconfiglines filename='code/ssh_config.txt' start=24 stop=27 %}
 
 But if the remote server doesn't know your identity it will reject it. So we
 need to give the public key to the remote server. This is very simple, all
@@ -117,7 +113,7 @@ keys in `.ssh/authorized_keys` on the server. Just the contents of the
 this file. We just have to call it for each server we want to be able to login
 with this key.
 
-```sh
+```bash
 ssh-copy-id -i ~/.ssh/id_rsa sshcc1.kek.jp
 ssh-copy-id -i ~/.ssh/id_rsa kekcc
 ```
