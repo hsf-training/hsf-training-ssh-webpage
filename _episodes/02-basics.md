@@ -82,11 +82,11 @@ impatient you can also press ``Ctrl-D`` as a shortcut.
 > **you know** that the server was reinstalled or upgraded you can tell ssh to
 > forget the previous host key. For example to forget the host key for
 > ``bastion.desy.de`` just use
+> ```bash
+> ssh-keygen -R bastion.desy.de
+> ```
 {: .callout}
 
-```bash
-ssh-keygen -R bastion.desy.de
-```
 
 ## Copying Files
 
