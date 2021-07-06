@@ -2,7 +2,7 @@ HSF Training SSH
 ==============
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 An introduction to SSH. This repository holds the source code of the webpage that is rendered [here](https://hsf-training.github.io/hsf-training-ssh-webpage/). Contributions are welcome (see below)!
@@ -36,6 +36,7 @@ the content of the lesson:
     <td align="center"><a href="https://github.com/daritter"><img src="https://avatars.githubusercontent.com/u/1186338?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Martin Ritter</b></sub></a><br /><a href="#content-daritter" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/meliache"><img src="https://avatars.githubusercontent.com/u/5121824?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Michael Eliachevitch</b></sub></a><br /><a href="#content-meliache" title="Content">🖋</a></td>
     <td align="center"><a href="https://www.lieret.net"><img src="https://avatars.githubusercontent.com/u/13602468?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kilian Lieret</b></sub></a><br /><a href="#content-klieret" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/936-BCruz"><img src="https://avatars.githubusercontent.com/u/64757758?v=4?s=100" width="100px;" alt=""/><br /><sub><b>936-BCruz</b></sub></a><br /><a href="#content-936-BCruz" title="Content">🖋</a></td>
   </tr>
 </table>
 
