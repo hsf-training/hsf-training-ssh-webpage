@@ -25,7 +25,7 @@ ssh username@servername.domain
 ```
 
 However, SSH has become much more powerful than this if you know how to use it
-correctly. In this section we will try to go through all the helpful features
+correctly. In the following we will try to go through all the helpful features
 you should know when working remotely.
 
 But first we need to talk a bit about security, especially encryption.
