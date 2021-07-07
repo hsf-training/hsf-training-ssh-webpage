@@ -25,7 +25,7 @@ ssh username@servername.domain
 ```
 
 However, SSH has become much more powerful than this if you know how to use it
-correctly. In the following we will try to go through all the helpful features
+correctly. In the following, we will try to go through all the helpful features
 you should know when working remotely.
 
 But first we need to talk a bit about security, especially encryption.
@@ -40,25 +40,10 @@ so we need to go through some key features of it.
 
 The idea behind asymmetric encryption is to have two distinct, different keys
 for encryption. One key can encrypt the message and then only the other key can
-decrypt the message.
+decrypt the message. In practice, we will keep one of these keys private and publish the other.
 
-A very simple example: consider a string of numbers from `1435706`. Now for
-encryption, we could just "add" a value to each of these digits and take the
-modulus by 10 to get another digit, $$f_{k}(x) = (x + k) \bmod 10$$
-
-Now, if we choose as keys $$A=3$$ and $$B=7$$, then we can "encrypt" the
-message by applying $$f_A(x)$$ on each digit to get the encrypted message,
-`4768039`. And we can decrypt it again by applying $$f_B(x)$$ to get the
-original message, `1435706`. This also works by first applying $$f_B(x)$$
-and then $$f_A(x)$$.
-
-If we encrypt a message with one key, we need to use the other key to decrypt the
-message again and vice versa. Now, this example is obviously way too simple but
-this is actually rather close to the [RSA algorithm](https://en.wikipedia.org/wiki/RSA_(cryptosystem)) still used today.
-
-In practice, we will now keep one of these keys private and publish the other.
-Let's say we have two people, Alice and Bob, where Alice owns the private key and
-Bob has the public key. Then, with this key pair they can perform two things:
+As an example, let's say we have two people, Alice and Bob, where Alice owns the private key and
+Bob has the public key. Then, with this key pair, they can perform two things:
 
 
 <figure>
@@ -79,6 +64,21 @@ Bob has the public key. Then, with this key pair they can perform two things:
    * This is the one you are using almost everywhere in the internet:
    every *https* connection on the internet uses this principle to make sure that the
    server claiming to be "netflix.com" is actually the real Netflix server. And this is also what we use for SSH connections.
+
+
+Following this example, consider a string of numbers from `1435706`. Now for
+encryption, we could just "add" a value to each of these digits and take the
+modulus by 10 to get another digit, $$f_{k}(x) = (x + k) \bmod 10$$
+
+Now, if we choose as keys $$A=3$$ and $$B=7$$, then we can "encrypt" the
+message by applying $$f_A(x)$$ on each digit to get the encrypted message,
+`4768039`. And we can decrypt it again by applying $$f_B(x)$$ to get the
+original message, `1435706`. This also works by first applying $$f_B(x)$$
+and then $$f_A(x)$$.
+
+So, if we encrypt a message with one key, we need to use the other key to decrypt the
+message again and vice versa. Now, this example is obviously way too simple but
+it is actually rather close to the [RSA algorithm](https://en.wikipedia.org/wiki/RSA_(cryptosystem)) still used today.
 
 
 > ## Warning: Private means private!
