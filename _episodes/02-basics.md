@@ -67,15 +67,18 @@ impatient you can also press ``Ctrl-D`` as a shortcut.
 > remembers the host key and will verify it on each connection. So you might
 > see something like this:
 >
->     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
->     @    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
->     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
->     IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
->     Someone could be eavesdropping on you right now (man-in-the-middle attack)!
->     It is also possible that a host key has just been changed.
->     The fingerprint for the RSA key sent by the remote host is
->     SHA256:zyIMwlji8jqtD+UuSFuknQmevQPAUCiT39BfH/NrIbA.
->     Please contact your system administrator.
+> ~~~
+> @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+> @    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+> @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+> IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+> Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+> It is also possible that a host key has just been changed.
+> The fingerprint for the RSA key sent by the remote host is
+> SHA256:zyIMwlji8jqtD+UuSFuknQmevQPAUCiT39BfH/NrIbA.
+> Please contact your system administrator.
+> ~~~
+> {: .output}
 >
 > This means the host presented a different key than it used to. This can
 > sometimes happen if the server you want to connect to was reinstalled. So if
