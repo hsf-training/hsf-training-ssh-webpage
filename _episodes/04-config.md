@@ -81,9 +81,9 @@ connecting to the gateway server and then, when connecting to the KEKCC machine.
 > > your own usernames and servers. 
 > {: .solution}
 {: .challenge}
-
-  
+ 
 ## Debugging
+  
   
 When debugging, it can sometimes be helpful to disable the config file
 to rule it out as a source of error. This can be done
