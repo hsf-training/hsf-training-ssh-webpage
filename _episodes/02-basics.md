@@ -15,7 +15,7 @@ keypoints:
 - "ssh uses host keys to ensure the identity of the server you connect to"
 ---
 Now back to SSH: When we connect to a server using SSH, it will use the same
-method of assymetric encryption to establish the identity of the server. When you connect for the
+method of asymetric encryption to establish the identity of the server. When you connect for the
 first time, SSH will ask you if you know this computer. If you type for the first time
 
 ```bash
@@ -51,7 +51,7 @@ Once you are connected, the next important step is to disconnect. To do so, just
 ``exit`` and press return (enter), and your connection will be closed. If you're very
 impatient you can also press ``Ctrl-D`` as a shortcut.
 
-> ## Warning: Long runing jobs
+> ## Warning: Long running jobs
 > Don't run long-running and CPU or memory heavy jobs on login nodes like
 > the one you just used.
 > Login nodes are shared
