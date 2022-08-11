@@ -15,7 +15,7 @@ keypoints:
 - "ssh uses host keys to ensure the identity of the server you connect to"
 ---
 Now back to SSH: When we connect to a server using SSH, it will use the same
-method of asymetric encryption to establish the identity of the server. When you connect for the
+method of asymmetric encryption to establish the identity of the server. When you connect for the
 first time, SSH will ask you if you know this computer. If you type for the first time
 
 ```bash
