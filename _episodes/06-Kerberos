@@ -3,7 +3,7 @@ title: "Kerberos-based login"
 teaching: 0
 exercises: 0
 questions:
-- "How do I get a krb5 ticket?" 
+- "How do I get a krb5 ticket?"
 - "How do I make my ssh config file use the krb5 ticket?"
 objectives:
 - "To be added..."

@@ -52,7 +52,7 @@ Bob has the public key. Then, with this key pair, they can perform two things:
 </figure>
 
 **Confidentiality**
-   * Bob can send confidential information only intended for Alice by encrypting 
+   * Bob can send confidential information only intended for Alice by encrypting
    it with the public key. Only Alice has the private key to decrypt it and
    nobody else can see the content of the message (left side of the figure).
 
@@ -90,4 +90,3 @@ it is actually rather close to the [RSA algorithm](https://en.wikipedia.org/wiki
 
 
 {% include links.md %}
-

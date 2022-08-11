@@ -64,7 +64,7 @@ it easier for others to get access to your key. This passphrase is not
 related to your account passwords and doesn't need to be changed, but you should
 choose something safe, preferably a [sequence of random words](https://xkcd.com/936/).
 Don't worry, you don't have to type it all the time.
-After that it should just print some information on the key and, with that, 
+After that it should just print some information on the key and, with that,
 you have created your very own SSH identity.
 
 > ## Question
@@ -95,7 +95,7 @@ you have created your very own SSH identity.
 
 ## Using your new key
 
-Now that you have a key, let's tell ssh to use it. If you chose the default name, ssh 
+Now that you have a key, let's tell ssh to use it. If you chose the default name, ssh
 will offer it to the remote server automatically. If you did not, or have other keys in the same directory,
 you need to tell ssh which identity to use with the `-i` flag each time you run it. But, again, the best way
 to do this is to add the key to the configuration file. You can eve tell ssh to not try to
@@ -106,7 +106,7 @@ use the password at all but just the listed keys. For example:
 But if the remote server doesn't know your identity, it will reject it. So we
 need to give the public key to the remote server. This is very simple, all
 private keys you want to be able to log into a server should have their public
-keys in `.ssh/authorized_keys` on the server; just the contents of the 
+keys in `.ssh/authorized_keys` on the server; just the contents of the
 `.pub` files, one after another. And, there is a program available to create
 this file. We just have to call it for each server we want to be able to login
 with this key.
@@ -123,7 +123,7 @@ ssh-copy-id -i ~/.ssh/id_rsa <hostname1>
 
 Once that is done, you should be able to login to the server with only the key
 password. You should only be asked to enter the passphrase once or
-maybe not at all if you already used the key recently, since, on most machines, 
+maybe not at all if you already used the key recently, since, on most machines,
 ssh will automatically remember the passphrase during the session.
 
 > ## Hint
@@ -153,7 +153,7 @@ having keys on servers like KEKCC. But sometimes, especially when using git, you
 might need or want keys to be available on these machines as well.
 
 The best thing to do here is "Agent forwarding": You tell ssh "please make the
-keys I have on this machine available while I connect to another machine". This is 
+keys I have on this machine available while I connect to another machine". This is
 done very easily, either by adding `-A` to the ssh call or by adding
 `ForwardAgent Yes` to the configuration file, either globally or on a per
 host basis.
