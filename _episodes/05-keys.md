@@ -18,7 +18,7 @@ keypoints:
 ---
 
 As you have seen there is a lot of entering your password, especially when
-jumping between hosts. Time to take care of that. Whenn we explained
+jumping between hosts. Time to take care of that. When we explained
 asymmetric encryption, we mentioned that SSH can use it to authenticate you to a server. This is
 usually safer and more convenient than using the password directly.
 
