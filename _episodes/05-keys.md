@@ -98,7 +98,7 @@ you have created your very own SSH identity.
 Now that you have a key, let's tell ssh to use it. If you chose the default name, ssh
 will offer it to the remote server automatically. If you did not, or have other keys in the same directory,
 you need to tell ssh which identity to use with the `-i` flag each time you run it. But, again, the best way
-to do this is to add the key to the configuration file. You can eve tell ssh to not try to
+to do this is to add the key to the configuration file. You can even tell ssh to not try to
 use the password at all but just the listed keys. For example:
 
 {% include includeconfiglines filename='code/ssh_config.txt' start=24 stop=27 %}
