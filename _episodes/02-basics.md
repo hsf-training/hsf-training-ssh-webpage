@@ -155,5 +155,5 @@ be helpful to disable it to rule out this source of error. This can be done
 by using the `-F` option to specify a blank config file:
 
 ```bash
-sh -F /dev/null <username>@<servername>
+ssh -F /dev/null <username>@<servername>
 ```
