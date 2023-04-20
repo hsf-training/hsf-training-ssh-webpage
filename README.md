@@ -89,4 +89,3 @@ Even more people contributed to the framework, but they are too many to list!
 [schools-badge]: https://img.shields.io/badge/upcoming%20events-browse-ff69b4
 [twitter-badge]: https://img.shields.io/twitter/follow/hsftraining?style=social
 [twitter]: https://twitter.com/hsftraining
-
