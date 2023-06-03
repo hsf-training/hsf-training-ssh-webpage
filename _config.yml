@@ -104,3 +104,6 @@ highlighter: rouge
 # show authors managed by allcontributors bot
 show_authors: true
 
+
+
+remote_theme: hsf-training/hsf-training-theme
