@@ -7,7 +7,7 @@ questions:
 - How does SSH encrypt traffic?
 - What's a private/public key?
 objectives:
-- Understatnding asymmetric cryptography
+- Understanding asymmetric cryptography
 keypoints:
 - "asymmetric cryptography has two keys, a private and a public key."
 - "it can be used to establish the identity of the owner of the private key."
