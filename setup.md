@@ -8,7 +8,7 @@ This tutorial requires a "shell" or "terminal" program. Below are instructions f
 
 If you are using a version of Windows, you will need to install [the Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/install). WSL will have the ssh programs you need by default, so once you've installed WSL you are ready for this tutorial.
 
-Note: If your version of Windows is either Windows 10 version 1809 or newer, then you have access to a windows ssh program called OpenSSH. More information about OpenSSH can be found [here](https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=gui). 
+Note: If your version of Windows is either Windows 10 version 1809 or newer, then you have access to a windows ssh program called OpenSSH. More information about OpenSSH can be found [here](https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=gui).
 
 ### Mac Installation and Access
 
