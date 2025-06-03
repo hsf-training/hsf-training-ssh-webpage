@@ -14,8 +14,8 @@ keypoints:
 - "``scp`` can be used to copy files from and to remote computers"
 - "ssh uses host keys to ensure the identity of the server you connect to"
 ---
- After checking the necessary requirements for the desired computer you are connecting to, it is important to make sure all needed software has been downloaded to perform the SSH process. 
- 
+ After checking the necessary requirements for the desired computer you are connecting to, it is important to make sure all needed software has been downloaded to perform the SSH process.
+
  When you connect for the
 first time, SSH will ask you if you know this computer. If you type for the first time
 
@@ -23,7 +23,7 @@ first time, SSH will ask you if you know this computer. If you type for the firs
 ssh <username>@<servername>
 ```
 
-(again, replace ``<username>`` for your collaboration username and ``<servername>`` for your collaboration servername), 
+(again, replace ``<username>`` for your collaboration username and ``<servername>`` for your collaboration servername),
  (do not include brackets),
 you should see something like
 
@@ -151,7 +151,7 @@ useful to switch on debugging output to get to know possible issues, by using th
 ssh -v <username>@<servername>
 ```
 
-Once you have created a configuration file (next section) in some cases it can also 
+Once you have created a configuration file (next section) in some cases it can also
 be helpful to disable it to rule out this source of error. This can be done
 by using the `-F` option to specify a blank config file:
 
