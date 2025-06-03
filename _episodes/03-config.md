@@ -21,7 +21,7 @@ automate this using the SSH configuration file, ``.ssh/config``, in your home
 directory. Usually, this file doesn't exist but you can simply create an empty
 file with that name.
 
-The syntax of the configuration file is very simple. It's just the name of a
+The syntax of the configuration file is very simple. It's the name of a
 configuration option followed by it's value. For example, to send periodic
 status updates which might help keep connections from disconnecting we can
 simply write the following in the file:
@@ -33,28 +33,28 @@ should only apply for these hosts. For example:
 
 {% include includeconfiglines filename='code/ssh_config.txt' start=13 stop=15 %}
 
-This now allows us to just execute ``ssh desy`` and the correct username and
+This now allows us to execute ``ssh desy`` and the correct username and
 full hostname are taken from the configuration file.
 
-This will also work with``scp`` so, now you can just use the shorter version of the previous exercise in *Basics*
-to - let's say - copy a file from the login server
+This will also work with``scp`` so, now you can use the shorter version of the previous exercise in *Basics*
+to copy a file from the login server
 
 ```bash
 scp <hostname>:/etc/mtod bastion-message
 ```
-where ``<hostname>`` is whatever name you gave to the server configuration in the config file.
+where ``<hostname>`` is the name you gave to the server configuration in the config file (do not include brackets.)
 
 In the case for DESY users, this now also allows us to automate the login to KEKCC via the gateway server
 
 {% include includeconfiglines filename='code/ssh_config.txt' start=17 stop=25 %}
 
 The line containing ``ProxyJump`` tells ssh to not directly connect to the host
-but first connect to the gateway host and then connect to it from there. We could make
+but first connect to the gateway host and then connect to the host from there. We could make
 this more complicated if needed by also adding a ProxyJump to the gateway server
 configuration if we need to perform even more jumps.
 You should now be able to
 login to KEKCC by just typing ``ssh kekcc`` and also copy files directly with
-``scp``. But you will have to enter your password two times: once, when
+``scp``. You will have to enter your password two times: once, when
 connecting to the gateway server and then, when connecting to the KEKCC machine.
 
 > ## In case of `ProxyJump` trouble

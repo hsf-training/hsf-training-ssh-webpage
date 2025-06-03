@@ -1,5 +1,5 @@
 ---
-title: "Additional tips & tricks"
+title: "Additional tips & tricks (optional)"
 teaching: 0
 exercises: 0
 questions:

@@ -14,16 +14,18 @@ keypoints:
 - "``scp`` can be used to copy files from and to remote computers"
 - "ssh uses host keys to ensure the identity of the server you connect to"
 ---
-Now back to SSH: When we connect to a server using SSH, it will use the same
-method of asymmetric encryption to establish the identity of the server. When you connect for the
+ After checking the necessary requirements for the desired computer you are connecting to, it is important to make sure all needed software has been downloaded to perform the SSH process. 
+ 
+ When you connect for the
 first time, SSH will ask you if you know this computer. If you type for the first time
 
 ```bash
 ssh <username>@<servername>
 ```
 
-(again, replace ``<username>`` for your collaboration username and ``<servername>`` for your collaboration servername), you
-should see something like
+(again, replace ``<username>`` for your collaboration username and ``<servername>`` for your collaboration servername), 
+ (do not include brackets),
+you should see something like
 
 ~~~
 The authenticity of host 'bastion.desy.de (131.169.5.82)' can't be established.
@@ -33,7 +35,7 @@ Are you sure you want to continue connecting (yes/no)?
 {: .output}
 
 This means that ssh doesn't have the public key of the servername, bastion.desy.de (in this case), which is
-called the "host key". Therefore, it warns that it cannot be sure you connected to the right server. It's
+called the "host key"(for more information see apendix). Therefore, it warns that it cannot be sure you connected to the right server. It's
 usually fine to just say yes; it will only ask you the first time and remember
 this decision. After you enter yes, you will get a message like
 
@@ -44,17 +46,16 @@ Warning: Permanently added 'bastion.desy.de' (RSA) to the list of known hosts.
 {: .output}
 
 which is perfectly normal. In the next step, the server will ask you for your
-password and after that, you should see a command line prompt and are
+password, please note the password will not appear on the screen and will be invisible. After that, you should see a command line prompt and are
 now connected.
 
 Once you are connected, the next important step is to disconnect. To do so, just type
-``exit`` and press return (enter), and your connection will be closed. If you're very
-impatient you can also press ``Ctrl-D`` as a shortcut.
+``exit`` and press return (enter), and your connection will be closed. Another option is entering ``Ctrl-D`` as a shortcut.
 
 > ## Warning: Long running jobs
 > Don't run long-running and CPU or memory heavy jobs on login nodes like
 > the one you just used.
-> Login nodes are shared
+> Login nodes, which describe a shared computer system that serves as an entry point for users to interact with a cluster, are shared
 > resources for all users and it's not very polite and, mostly, it is also not
 > permitted to occupy them with calculations that could be done on dedicated
 > machines.
@@ -96,7 +97,7 @@ impatient you can also press ``Ctrl-D`` as a shortcut.
 
 ## Copying Files
 
-In addition to just connecting to a remote shell we can also ssh to copy files
+In addition to just connecting to a remote shell we can also use ssh to copy files
 from one computer to another. Very similar to the ``cp`` command, there is a
 ``scp`` command, for a "Secure Copy". To specify a file on a server just precede
 the filename with the ssh connection string followed by a colon. For example:
@@ -144,13 +145,13 @@ directory on the server ``bastion.desy.de``.
 
 
 If you run into trouble in one of the following sections, it can be very
-instructive to switch on debugging output to get to know possible issues, by using the ``-v`` flag of ssh:
+useful to switch on debugging output to get to know possible issues, by using the ``-v`` flag of ssh:
 
 ```bash
 ssh -v <username>@<servername>
 ```
 
-Once you have created a configuration file (next section) it can also sometimes
+Once you have created a configuration file (next section) in some cases it can also 
 be helpful to disable it to rule out this source of error. This can be done
 by using the `-F` option to specify a blank config file:
 
