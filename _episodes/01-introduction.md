@@ -66,4 +66,4 @@ Once the authentication process has been completed, your login will be validated
 
 ## Kerberos
 
-Some institutions, like Fermilab, use Kerberos. See the [Kerberos](06-Kerberos.md) section if you are connecting to a Fermilab server.
+Some institutions, like DESY and Fermilab, use Kerberos. See the [Kerberos](06-Kerberos.md) section if you are connecting to a server that uses Kerberos. 

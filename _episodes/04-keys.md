@@ -31,11 +31,25 @@ usually safer and more convenient than using the password directly.
 > which will have almost the same effect.
 {: .callout}
 
+> ## Question
+> Determine if you already have a key pair
+> > ## Hint
+> > Key pairs are often stored in the `~/.ssh ` folder
+> {: .solution}
+> > ## Solution
+> > Type this following command `ls ~/.ssh ` and look for files that end in .pub
+> {: .solution}
+{: .challenge}
 
 ## Creating a key pair
 
 First, we need to create a private/public key pair to be used for SSH, called an
-identity. We want to do this on your **local machine** just by calling `ssh-keygen`. Without any options this will just
+identity.
+
+> ## Warning!
+> The process below will create two files, one of which is your private key and one of which is your public key.  To preserve the security of your system, the private key must stay on your local machine and never leave!  The public key is, in fact, public, and this is the information you will copy to other machines.
+
+We will create the private/public key pair on your **local machine** by calling `ssh-keygen`. Without any options this will
 create a private/public key pair we can use but, you might at least give it a
 comment string so that you can identify the key easier. For example, `-C` will provide a comment to your key.
 
