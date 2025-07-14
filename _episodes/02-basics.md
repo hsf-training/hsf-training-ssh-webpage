@@ -52,7 +52,7 @@ Once you are connected, you will now be able to do your work on the remote compu
 
 > ## Warning: Long running jobs
 > Don't run long-running and CPU or memory heavy jobs on login nodes.
-> Login nodes, which is an entry point for users to interact with a cluster, are shared 
+> Login nodes, which is an entry point for users to interact with a cluster, are shared
 > resources for all users and it's not very polite and, mostly, it is also not
 > permitted to occupy them with calculations that could be done on dedicated
 > machines.
