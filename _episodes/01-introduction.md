@@ -25,6 +25,9 @@ ssh username@servername.domain
 
 
 
+
+![SSH Image](../fig/ssh_connection.png)
+
 To begin this process, you will need to make sure that you have a ssh endpoint. This means that you need an account on the server you are connecting to which will then give you a server name.
 
 To do this, you will need to get in contact with the person within your department/company that is responsible for adding new users to the desired server.
