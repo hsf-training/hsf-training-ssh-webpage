@@ -40,13 +40,13 @@ To do this, you will need to get in contact with the person within your departme
 
 
 
-Below is a list of common additional requirements past your username and password. 
+Below is a list of common additional requirements past your username and password.
 
-## VPN Requirements 
+## VPN Requirements
 
 A Virtual Private Network (VPN) is a secure connection that encrypts your internet traffic and masks your ip address to allow you to access the internet as if you were on a private network. This is used to enhance the privacy and security of your network while you browse.
 
-The instructions for the computer you are connecting to will say if you need a VPN and they will link to instructions for setting up the VPN appropriately. 
+The instructions for the computer you are connecting to will say if you need a VPN and they will link to instructions for setting up the VPN appropriately.
 
 
 ## Two Factor Authentication
@@ -57,6 +57,6 @@ The two parts of this authentication process include, a password/pin, and a hard
 To perform the authentication, you will begin by using your login like normal. Then you will be prompted to provide a second version of a password. This will come in either the form of a code or set of numbers that appear on the authenticator app, or a physical button to be pressed via another form (email,text message, phone call, etc.)
 Once the authentication process has been completed, your login will be validated and you should be given access.
 
-## Kerberos 
+## Kerberos
 
  Fermilab uses Kerberos. See Kerberos section if you are connecting to a Fermilab server.
