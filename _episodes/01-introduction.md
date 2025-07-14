@@ -33,7 +33,7 @@ To do this, you will need to get in contact with the person within your departme
 > ## Note
 > Doing this process with instructions from your computer system, is the best way to ensure a smooth ssh connection.
 > These Instructions should tell you if there are any additional requirements for connecting, like a VPN, two-Factor Authentication, or Kerberos.
-> It is also reccomended you check any VPN requirements that your institution may have at the same time. (Directions below.)
+
 
 
 
@@ -44,19 +44,19 @@ Below is a list of common additional requirements past your username and passwor
 
 ## VPN Requirements 
 
-A Virtual Private Network (VPN) is a secure connection that encrypts your internet traffic and masks your ip address to allow you to access the internet as if you were on a private network. This is used to enhance the privacy and security of your network while you browse.
+A Virtual Private Network (VPN) is a secure connection that encrypts your internet traffic and masks your ip address to allow you to access the internet as if you were on a private network. This is used to enhance the privacy and security of your network.
 
 The instructions for the computer you are connecting to will say if you need a VPN and they will link to instructions for setting up the VPN appropriately. 
 
 
 ## Two Factor Authentication
 
-This is a security method that requires two seperate forms of identification to access an accountant or system. In this case, we will be using it to access a server.
-The two parts of this authentication process include, a password/pin, and a hardware token or authentication app via a smartphone or another device.
+This is a security method that requires two seperate forms of identification to access an account or system. In this case, we will be using it to access a remote computer. The two parts of this authentication process include a password/pin and a hardware token or authentication app via a smartphone or another device.
 
-To perform the authentication, you will begin by using your login like normal. Then you will be prompted to provide a second version of a password. This will come in either the form of a code or set of numbers that appear on the authenticator app, or a physical button to be pressed via another form (email,text message, phone call, etc.)
+To perform the authentication, you will begin by using your login like normal. Then you will be prompted to provide a second level of authentication. This will come in either the form of a code or set of numbers that appear on the authenticator app, or a button to be pressed on another device (email, text message, phone call, etc.)
+
 Once the authentication process has been completed, your login will be validated and you should be given access.
 
 ## Kerberos 
 
- Fermilab uses Kerberos. See Kerberos section if you are connecting to a Fermilab server.
+Some institutions, like Fermilab, use Kerberos. See the [Kerberos](06-Kerberos.md) section if you are connecting to a Fermilab server.
