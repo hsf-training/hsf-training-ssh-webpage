@@ -32,6 +32,10 @@ To begin this process, you will need to make sure that you have a ssh endpoint. 
 
 To do this, you will need to get in contact with the person within your department/company that is responsible for adding new users to the desired server.
 
+## Required Software 
+
+Because SSH is a program, you will need that program available on your machine. For Mac and Linux users, SSH is automaticaly available in your terminal. For Windows users, we reccomend installing Windows Subsystem for Linux (WSL). See [Install WSL](https://learn.microsoft.com/en-us/windows/wsl/install) for installation instructions. After installing WSL, we reccomend using the Terminal application which is available for free in the Microsoft Store. 
+
 
 > ## Note
 > Doing this process with instructions from your computer system, is the best way to ensure a smooth ssh connection.

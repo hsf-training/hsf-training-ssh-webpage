@@ -14,7 +14,7 @@ keypoints:
 - "``scp`` can be used to copy files from and to remote computers"
 - "ssh uses host keys to ensure the identity of the server you connect to"
 ---
- After checking the necessary requirements for the desired computer you are connecting to, it is important to make sure all needed software has been downloaded to perform the SSH process.
+ After checking the necessary requirements for the computer you are connecting to, and installing the required software if necessary, you are ready to connect.
 
  When you connect for the
 first time, SSH will ask you if you know this computer. If you type for the first time
@@ -29,7 +29,7 @@ you should see something like
 
 ~~~
 The authenticity of host 'bastion.desy.de (131.169.5.82)' can't be established.
-RSA key fingerprint is SHA256:WbkI/Ko+FdCbIAVn6ky2odyWxCvCL3+5XqWSZQ6PynE.
+RSA key fingerprint is SHA256:WbkI/Ko+FdCbIAVn6ky2odyWxCvCL3+5XqWSZQ6PynE
 Are you sure you want to continue connecting (yes/no)?
 ~~~
 {: .output}
@@ -46,16 +46,13 @@ Warning: Permanently added 'bastion.desy.de' (RSA) to the list of known hosts.
 {: .output}
 
 which is perfectly normal. In the next step, the server will ask you for your
-password, please note the password will not appear on the screen and will be invisible. After that, you should see a command line prompt and are
-now connected.
+password, please note the password will not appear on the screen and will be invisible. After that, you should see a command line prompt and are now connected.
 
-Once you are connected, the next important step is to disconnect. To do so, just type
-``exit`` and press return (enter), and your connection will be closed. Another option is entering ``Ctrl-D`` as a shortcut.
+Once you are connected, you will now be able to do your work on the remote computer. After your work is complete you should disconnect. To do so, just type ``exit`` and press return (enter), and your connection will be closed. Another option is entering ``Ctrl-D`` as a shortcut.
 
 > ## Warning: Long running jobs
-> Don't run long-running and CPU or memory heavy jobs on login nodes like
-> the one you just used.
-> Login nodes, which describe a shared computer system that serves as an entry point for users to interact with a cluster, are shared
+> Don't run long-running and CPU or memory heavy jobs on login nodes.
+> Login nodes, which is an entry point for users to interact with a cluster, are shared 
 > resources for all users and it's not very polite and, mostly, it is also not
 > permitted to occupy them with calculations that could be done on dedicated
 > machines.
