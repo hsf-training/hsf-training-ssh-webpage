@@ -18,8 +18,8 @@ keypoints:
 ---
 
 As you have seen there is a lot of entering your password, especially when
-jumping between hosts. Time to take care of that. 
-[Asymmetric encryption](09-appendix.md) can authenticate you to a server. 
+jumping between hosts. Time to take care of that.
+[Asymmetric encryption](09-appendix.md) can authenticate you to a server.
 This is usually safer and more convenient than using the password directly.
 
 

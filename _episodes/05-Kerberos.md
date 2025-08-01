@@ -53,7 +53,7 @@ sending a second encrypted key.
 
 ---
 > ## How do I get a kbr5 ticket?
- To accquire a kbr5 ticket you will need to use the following process. You will need to fill in some information, which you can find on the server documentation. 
+ To accquire a kbr5 ticket you will need to use the following process. You will need to fill in some information, which you can find on the server documentation.
  1. Open a terminal
  We will start by using kinit to obtain the keberos ticket.
  2. Run this commnd:
@@ -112,7 +112,7 @@ sudo dnf install krb5-workstation openssh-clients
 ```
 > 2. Next, you will add:
 ```bash
-  Host <your-hostname> 
+  Host <your-hostname>
     GSSAPIAuthentication yes
     GSSAPIDelegateCredentials yes
 ```
@@ -149,4 +149,4 @@ kinit -r 7d your_username@REALM
  - Kerberos Forwarding and Delegation:
   > Using `GSSAPIDelegateCredentials yes` forwards your Kerberos ticket to the remote server. This allows SSH hopping which is the process in which you SSH from one server to another without re-authenticating. It is important to note however that you should only enable delegation if you trust the server. If the server is not trustworthy, the ticket could be stolen.
 
-Kerberos is complex, if you are experiencing issues please reach out to your IT help. 
+Kerberos is complex, if you are experiencing issues please reach out to your IT help.
