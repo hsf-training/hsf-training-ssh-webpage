@@ -18,9 +18,9 @@ keypoints:
 ---
 
 As you have seen there is a lot of entering your password, especially when
-jumping between hosts. Time to take care of that. When we explained
-asymmetric encryption, we mentioned that SSH can use it to authenticate you to a server. This is
-usually safer and more convenient than using the password directly.
+jumping between hosts. Time to take care of that. 
+[Asymmetric encryption](09-appendix.md) can authenticate you to a server. 
+This is usually safer and more convenient than using the password directly.
 
 
 > ## Note
@@ -42,9 +42,7 @@ usually safer and more convenient than using the password directly.
 {: .challenge}
 
 ## Creating a key pair
-
-First, we need to create a private/public key pair to be used for SSH, called an
-identity.
+If you do not already have a key pair, we need to create one. This next section will show you how to create a private/public kep pair to be used for SSH, called an identity.
 
 > ## Warning!
 > The process below will create two files, one of which is your private key and one of which is your public key.  To preserve the security of your system, the private key must stay on your local machine and never leave!  The public key is, in fact, public, and this is the information you will copy to other machines.
