@@ -1,0 +1,5 @@
+{
+    "name": "SSH training",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "devcontainer",
+}
