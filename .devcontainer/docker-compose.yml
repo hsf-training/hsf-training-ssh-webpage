@@ -1,11 +1,9 @@
 services:
   devcontainer:
     platform: linux/x86_64
-    build:
-      context: .
-      dockerfile: Dockerfile-main
-      args:
-        SERVER_URL: ${SERVER_URL}
+    image: docker:latest
+    extra_hosts:
+      - "${SERVER_URL}:127.0.0.1"
     container_name: devcontainer
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
