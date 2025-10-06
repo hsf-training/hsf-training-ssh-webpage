@@ -1,0 +1,5 @@
+FROM docker:latest
+
+ARG SERVER_URL
+
+RUN sudo echo "127.0.0.1   ${SERVER_URL}" > /etc/hosts
