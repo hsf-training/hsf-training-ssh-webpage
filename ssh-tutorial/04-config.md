@@ -1,4 +1,4 @@
-# The config file!
+# The config file
 
 ```{admonition} Learning Objectives
 - Write your first SSH config file!

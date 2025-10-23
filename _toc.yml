@@ -4,6 +4,8 @@
 format: jb-book
 root: intro
 chapters:
+- file: setup
+  title: Setup
 - file: ssh-tutorial/01-introduction
   title: Introduction
 - file: ssh-tutorial/02-basics
@@ -11,14 +13,12 @@ chapters:
 - file: ssh-tutorial/03-nested
   title: Nested SSH Connections (Optional)
 - file: ssh-tutorial/04-config
-  title: The config file!
+  title: The config file
 - file: ssh-tutorial/05-keys
-  title: Key based authentication!
+  title: Key based authentication
 - file: ssh-tutorial/07-port-forwarding
   title: Port forwarding
 - file: ssh-tutorial/08-tips
   title: Additional tips & tricks
-- file: setup
-  title: Setup
 - file: reference
   title: Reference

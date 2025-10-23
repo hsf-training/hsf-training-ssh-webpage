@@ -1,4 +1,4 @@
-# Key based authentication!
+# Key based authentication
 
 ```{admonition} Learning Objectives
 - Generate an SSH key and use it

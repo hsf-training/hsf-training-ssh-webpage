@@ -61,13 +61,17 @@ The two use cases of public/private encryption using our very simple example.
 
 Following this example, consider a string of numbers from `1435706`. Now for
 encryption, we could just "add" a value to each of these digits and take the
-modulus by 10 to get another digit, $$f_{k}(x) = (x + k) \bmod 10$$
+modulus by 10 to get another digit, 
 
-Now, if we choose as keys $$A=3$$ and $$B=7$$, then we can "encrypt" the
-message by applying $$f_A(x)$$ on each digit to get the encrypted message,
-`4768039`. And we can decrypt it again by applying $$f_B(x)$$ to get the
-original message, `1435706`. This also works by first applying $$f_B(x)$$
-and then $$f_A(x)$$.
+$$
+f_{k}(x) = (x + k) \bmod 10
+$$
+
+Now, if we choose as keys $A=3$ and $B=7$, then we can "encrypt" the
+message by applying $f_A(x)$ on each digit to get the encrypted message,
+`4768039`. And we can decrypt it again by applying $f_B(x)$ to get the
+original message, `1435706`. This also works by first applying $f_B(x)$
+and then $f_A(x)$.
 
 So, if we encrypt a message with one key, we need to use the other key to decrypt the
 message again and vice versa. Now, this example is obviously way too simple but
