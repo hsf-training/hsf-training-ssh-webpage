@@ -1,0 +1,4 @@
+jupyter-book>=0.15.0
+sphinx>=5.0
+sphinx-book-theme>=1.0.0
+myst-parser>=1.0.0
