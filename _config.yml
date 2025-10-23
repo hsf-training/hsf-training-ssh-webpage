@@ -4,7 +4,7 @@
 # Book settings
 title: "Introduction to SSH"
 author: "HSF Training"
-logo: ""
+logo: "fig/hsf-logo.png"
 copyright: "2025"
 
 # Force re-execution of notebooks on each build.

@@ -14,9 +14,11 @@ This training module is part of an initiative of the [HEP Software Foundation](h
 
 Thanks goes to these wonderful people who contributed to the content of this lesson:
 
-- Martin Ritter
-- Michael Eliachevitch
-- Kilian Lieret
-- 936-BCruz
-
-Even more people contributed to the framework, but they are too many to list!
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/daritter"><img src="https://avatars.githubusercontent.com/u/1186338?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Martin Ritter</b></sub></a></td>
+    <td align="center"><a href="https://github.com/meliache"><img src="https://avatars.githubusercontent.com/u/5121824?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Michael Eliachevitch</b></sub></a></td>
+    <td align="center"><a href="https://www.lieret.net"><img src="https://avatars.githubusercontent.com/u/13602468?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kilian Lieret</b></sub></a></td>
+    <td align="center"><a href="https://github.com/936-BCruz"><img src="https://avatars.githubusercontent.com/u/64757758?v=4?s=100" width="100px;" alt=""/><br /><sub><b>936-BCruz</b></sub></a></td>
+  </tr>
+</table>
