@@ -8,8 +8,7 @@ questions:
 - What if I don’t have access to a remote cluster like CERN?
 objectives:
 - Generate and use an SSH key pair.
-- Test an SSH connection locally or inside GitHub Codespaces.
-- Practice connecting to remote Linux environments.
+- Test an SSH connection inside GitHub Codespaces, locally or through lxplus at CERN or LPC at Fermilab.
 - (Optional) Set up access to lxplus at CERN or LPC at Fermilab.
 keypoints:
 - SSH provides a secure encrypted connection between your computer and a remote server.
@@ -349,7 +348,7 @@ Proceed to the next lesson: **“Introduction to SSH”**.
 ---
 
 <p style="font-size:11px; color:#888;">
-Page improvements and Codespaces integration by Iliomar Rodríguez-Ramos.
+Page improvements by Iliomar Rodríguez-Ramos.
 </p>
 
 {% include links.md %}
