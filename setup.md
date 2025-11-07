@@ -100,9 +100,9 @@ Codespaces is the ideal environment for practicing SSH commands even if you lack
 
 ---
 
-The following steps assume you already have a Codespace running. If you haven’t created one yet, follow the instructions here: [Creating a codespace for a repository](https://docs.github.com/en/codespaces/developing-in-a-codespace/creating-a-codespace-for-a-repository)
+The following steps assume you already have a Codespace running. If you haven’t created one yet, follow the instructions here: [Creating a codespace for a repository](https://docs.github.com/en/codespaces/developing-in-a-codespace/creating-a-codespace-for-a-repository). Please note that these commands must be executed from the Codespace terminal.
 
-## Step 1 — Install & Start the SSH Server. ssh-keygen -t ed25519
+## Step 1 — Install & Start the SSH Server
 
 ```
 sudo apt-get update && sudo apt-get install -y openssh-server
