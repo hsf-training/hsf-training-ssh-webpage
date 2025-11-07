@@ -4,12 +4,11 @@ teaching: 0
 exercises: 0
 questions:
 - What do I need before starting the SSH tutorial?
-- How can I create and test an SSH key on my computer?
+- How can I create and test an SSH key on my computer or a GitHub Codespace?
 - What if I don’t have access to a remote cluster like CERN?
 objectives:
 - Generate and use an SSH key pair.
-- Test an SSH connection inside GitHub Codespaces, locally or through lxplus at CERN or LPC at Fermilab.
-- (Optional) Set up access to lxplus at CERN or LPC at Fermilab.
+- Test an SSH connection inside GitHub Codespaces, locally or through lxplus (at CERN) or (LPC at Fermilab).
 keypoints:
 - SSH provides a secure encrypted connection between your computer and a remote server.
 - SSH keys allow passwordless, secure authentication.
@@ -121,7 +120,7 @@ sudo mkdir -p /run/sshd
 sudo service ssh start
 ```
 
-You should see something like this
+The expected output is
 
 ```* Starting OpenBSD Secure Shell server sshd```
 
@@ -135,7 +134,7 @@ If you already generated your SSH key:
 ssh-keygen -t ed25519
 ```
 
-This will generate your public/private key pair. You can press the return key three times to the questions asked.
+This will generate your public/private key pair. You can press the return/Enter key three times for the questions asked.
 
 Add the public key so SSH can authenticate you:
 
