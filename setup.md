@@ -17,15 +17,15 @@ keypoints:
 
 # Overview
 
-Before starting this tutorial, you’ll set up **SSH (Secure Shell)** on your computer or in GitHub Codespaces.  
+Before starting this tutorial, you’ll set up **SSH (Secure Shell)** on your computer or in GitHub Codespaces.
 SSH lets you securely connect to another machine, execute commands remotely, and transfer files.
 
 You will learn how to:
 
-- generate your first SSH key pair  
-- test SSH connections (Codespaces or local machine)  
-- understand how SSH works  
-- optionally connect to lxplus or Fermilab LPC  
+- generate your first SSH key pair
+- test SSH connections (Codespaces or local machine)
+- understand how SSH works
+- optionally connect to lxplus or Fermilab LPC
 
 This setup ensures you’re ready for the hands-on SSH lessons that follow.
 
