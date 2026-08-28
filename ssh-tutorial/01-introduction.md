@@ -37,7 +37,7 @@ As an example, let's say we have two people, Alice and Bob, where Alice owns the
 Bob has the public key. Then, with this key pair, they can perform two things:
 
 
-```{figure} ../fig/asymmetric_encryption.png
+```{figure} fig/asymmetric_encryption.png
 ---
 name: asymmetric-encryption
 ---

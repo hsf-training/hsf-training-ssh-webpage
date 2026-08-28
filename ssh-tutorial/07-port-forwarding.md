@@ -60,7 +60,7 @@ We need to run `ssh -L 8080:software.belle2.org:443 desy` and then type
 ````
 
 
-### Programs that open ports on the target machine
+## Programs that open ports on the target machine
 
 One special case is running programs on the other side that directly open a port
 on the machine you're working on for you to connect. The most prominent example

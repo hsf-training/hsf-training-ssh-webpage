@@ -37,8 +37,8 @@ jobs:
           activate-environment: ssh-tutorial
       - name: Build the book
         run: |
-          pip install "jupyter-book"
-          jupyter book build .
+          pip install "jupyter-book < 2.0"
+          jupyter book build ssh-tutorial
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:

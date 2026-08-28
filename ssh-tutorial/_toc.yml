@@ -6,19 +6,19 @@ root: index
 chapters:
 - file: setup
   title: Setup
-- file: ssh-tutorial/01-introduction
+- file: 01-introduction
   title: Introduction
-- file: ssh-tutorial/02-basics
+- file: 02-basics
   title: Basics
-- file: ssh-tutorial/03-nested
+- file: 03-nested
   title: Nested SSH Connections (Optional)
-- file: ssh-tutorial/04-config
+- file: 04-config
   title: The config file
-- file: ssh-tutorial/05-keys
+- file: 05-keys
   title: Key based authentication
-- file: ssh-tutorial/07-port-forwarding
+- file: 07-port-forwarding
   title: Port forwarding
-- file: ssh-tutorial/08-tips
+- file: 08-tips
   title: Additional tips & tricks
 - file: reference
   title: Reference

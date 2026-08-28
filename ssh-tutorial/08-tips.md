@@ -130,7 +130,7 @@ session. A terminal multiplexer allows for example to
   for running a process in one pane and monitoring the processor load via
   [htop](https://htop.dev/)
 
-```{figure} ../fig/tmux_on_kekcc.png
+```{figure} fig/tmux_on_kekcc.png
 ---
 name: tmux-kekcc
 ---
