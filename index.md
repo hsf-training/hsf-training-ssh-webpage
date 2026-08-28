@@ -4,7 +4,7 @@ Secure Shell (SSH) is a protocol to access other computers e.g., it allows loggi
 
 ## Prerequisites
 
-Basic knowledge of the Unix Shell, e.g., from the [carpentry course](https://swcarpentry.github.io/shell-novice/)
+Basic knowledge of the Unix Shell, e.g., from the [HSF Training course](https://hsf-training.github.io/hsf-training-unix-shell/00-setup.html)
 
 ## About This Training
 

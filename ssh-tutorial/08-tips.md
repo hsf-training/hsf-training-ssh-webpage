@@ -98,7 +98,7 @@ identical to a VPN connection.
 
 ## Using a terminal multiplexer (e.g. tmux, screen)
 
-When you loose your ssh connection or your terminal window is closed, all
+When you lose your ssh connection or your terminal window is closed, all
 processes that had been running in that terminal are also killed. This can
 be frustrating if it is a long-running process such compilation or a dataset
 download.
@@ -155,7 +155,7 @@ bookmarks. The commands that you need for the most basic use-case are
     resources like login nodes.
 * `tmux detach` Detaches the current tmux session, so that you return your original
     terminal session, but the tmux session keeps running in the background.
-    This happens automatically when you loose your connection or your terminal
+    This happens automatically when you lose your connection or your terminal
     is closed.
 * `tmux attach`. Short form: `tmux a`.
     Attaches a running but detached tmux session. When you log into a cluster

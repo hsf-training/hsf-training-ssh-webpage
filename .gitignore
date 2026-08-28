@@ -14,7 +14,6 @@ _site
 .vendor/
 vendor/
 .docker-vendor/
-Gemfile.lock
 .*history
 # Jupyter Book build outputs
 _build/
