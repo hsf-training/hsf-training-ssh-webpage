@@ -27,7 +27,7 @@ rsync -vaz server:/folder/ localfolder
 
 which will efficiently copy everything in `folder` on `server` and put it in
 the directory `localfolder` (beware, it matters whether or not you put a slash
-at the end of the target)/ The most common options are
+at the end of the target). The most common options are
 
 | Option     | Explanation |
 | ---------- | ----------- |

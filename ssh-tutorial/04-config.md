@@ -100,7 +100,7 @@ to rule it out as a source of error. This can be done
 by using the `-F` option to specify a blank config file:
 
 ```bash
-sh -F /dev/null <username>@<servername>
+ssh -F /dev/null <username>@<servername>
 ```
 
 ```{admonition} Key Points
