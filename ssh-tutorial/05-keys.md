@@ -1,21 +1,10 @@
----
-title: "Key based authentication!"
-teaching: 0
-exercises: 0
-questions:
-- "How can I avoid typing very long passwords while still ensuring strong security?"
-objectives:
-- "Generate an SSH key and use it"
-keypoints:
-- "`ssh-keygen` can be used to create private/public key pairs for authentication"
-- "`ssh-copy-id` can be used to copy the public key to the server to enable
-  login via the private key"
-- "which keys to use for which server can be configured in the configuration
-  file"
-- "Agent forwarding can be used to make your local private keys available on
-  the server you connect."
-- "`ssh-add` allows you to add, list or remove identities from the agent"
----
+# Key based authentication
+
+```{admonition} Learning Objectives
+- Generate an SSH key and use it
+- Learn how to avoid typing long passwords while still ensuring strong security
+- Understand agent forwarding and ssh-add
+```
 
 As you have seen there is a lot of entering your password, especially when
 jumping between hosts. Time to take care of that. When we explained
@@ -23,13 +12,13 @@ asymmetric encryption, we mentioned that SSH can use it to authenticate you to a
 usually safer and more convenient than using the password directly.
 
 
-> ## Note
-> Key based login doesn't work to all servers. The most notable exception for us
-> is DESY as they have a different security system called kerberos which is
-> incompatible with key-based login. However, for DESY, one can obtain a
-> `kerberos token <https://confluence.desy.de/x/173UBw>`_ instead
-> which will have almost the same effect.
-{: .callout}
+```{note}
+Key based login doesn't work to all servers. The most notable exception for us
+is DESY as they have a different security system called kerberos which is
+incompatible with key-based login. However, for DESY, one can obtain a
+[kerberos token](https://confluence.desy.de/x/173UBw) instead
+which will have almost the same effect.
+```
 
 
 ## Creating a key pair
@@ -52,11 +41,11 @@ It is advisable to put them in the `.ssh` directory but in theory you can put th
 anywhere.
 
 
-> ## Warning!
-> If you already have a key in your `.ssh` directory this might overwrite
-> the existing key and cause problems on existing logins. Only overwrite the
-> existing key if you are sure you don't need the old one.
-{: .caution}
+```{danger} Warning!
+If you already have a key in your `.ssh` directory this might overwrite
+the existing key and cause problems on existing logins. Only overwrite the
+existing key if you are sure you don't need the old one.
+```
 
 Next, it will ask you for a passphrase to protect the key. While technically you
 can create keys without a passphrase, you should **never** do so as it would make
@@ -67,31 +56,33 @@ Don't worry, you don't have to type it all the time.
 After that it should just print some information on the key and, with that,
 you have created your very own SSH identity.
 
-> ## Question
-> Where is the public key stored?
-> > ## Hint
-> > Check the output of `ssh-keygen`
-> {: .solution}
-> > ## Solution
-> > In a file with the same name as the private key but `.pub` in the end.
-> {: .solution}
-{: .challenge}
+````{admonition} Question
+:class: tip
+Where is the public key stored?
+```{dropdown} Hint
+Check the output of `ssh-keygen`
+```
+```{dropdown} Solution
+In a file with the same name as the private key but `.pub` in the end.
+```
+````
 
-> ## Question (optional)
-> The default key type is to use "rsa". What types are possible for a key?
-> > ## Hint
-> > Try `man ssh-keygen` or, for more information, google "ssh key types".
-> {: .solution}
-> > ## Solution
-> > There should be [RSA](https://en.wikipedia.org/wiki/RSA_(cryptosystem)),
-> > [DSA](https://en.wikipedia.org/wiki/Digital_Signature_Algorithm),
-> > [ECDSA](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm>`)
-> > and [Ed25519](https://en.wikipedia.org/wiki/Curve25519>).
-> > However, DSA has been found unsafe and there are some concerns about ECDSA so,
-> > the only real options are RSA and Ed25519. Ed25519 was added later and should
-> > be more secure but it is not supported on very old versions of SSH.
-> {: .solution}
-{: .challenge}
+````{admonition} Question (optional)
+:class: tip
+The default key type is to use "rsa". What types are possible for a key?
+```{dropdown} Hint
+Try `man ssh-keygen` or, for more information, google "ssh key types".
+```
+```{dropdown} Solution
+There should be [RSA](https://en.wikipedia.org/wiki/RSA_(cryptosystem)),
+[DSA](https://en.wikipedia.org/wiki/Digital_Signature_Algorithm),
+[ECDSA](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm)
+and [Ed25519](https://en.wikipedia.org/wiki/Curve25519).
+However, DSA has been found unsafe and there are some concerns about ECDSA so,
+the only real options are RSA and Ed25519. Ed25519 was added later and should
+be more secure but it is not supported on very old versions of SSH.
+```
+````
 
 ## Using your new key
 
@@ -101,7 +92,12 @@ you need to tell ssh which identity to use with the `-i` flag each time you run 
 to do this is to add the key to the configuration file. You can even tell ssh to not try to
 use the password at all but just the listed keys. For example:
 
-{% include includeconfiglines filename='code/ssh_config.txt' start=24 stop=27 %}
+```
+Host sshcc1.kek.jp
+    User YOUR_SSHLOGIN_USERNAME
+    IdentityFile ~/.ssh/id_kekccgateway
+    IdentitiesOnly yes
+```
 
 But if the remote server doesn't know your identity, it will reject it. So we
 need to give the public key to the remote server. This is very simple, all
@@ -115,29 +111,29 @@ with this key.
 ssh-copy-id -i ~/.ssh/id_rsa <hostname1>
 ```
 
-> ## Hint
-> If you created the key in a different file you need to change the filename
-> given with the `-i` parameters. You can also omit the `-i <identity>`
-> option and ssh-copy-id will copy all public keys it can find.
-{: .callout}
+```{note} Hint
+If you created the key in a different file you need to change the filename
+given with the `-i` parameters. You can also omit the `-i <identity>`
+option and ssh-copy-id will copy all public keys it can find.
+```
 
 Once that is done, you should be able to login to the server with only the key
 password. You should only be asked to enter the passphrase once or
 maybe not at all if you already used the key recently, since, on most machines,
 ssh will automatically remember the passphrase during the session.
 
-> ## Hint
-> If ssh does ask you for your passphrase every time you might need to check
-> or configure your `ssh-agent`, the process that remembers the keys.
-> Start the ssh-agent in the background:
-> `bash
-> eval "$(ssh-agent -s)"
-> `
-> Now, add your private key to the ssh-agent
-> `bash
-> ssh-add ~/path/to/key
-> `
-{: .callout}
+```{note} Hint
+If ssh does ask you for your passphrase every time you might need to check
+or configure your `ssh-agent`, the process that remembers the keys.
+Start the ssh-agent in the background:
+```bash
+eval "$(ssh-agent -s)"
+```
+Now, add your private key to the ssh-agent
+```bash
+ssh-add ~/path/to/key
+```
+```
 
 You need to repeat these steps for all machines you work from, so your laptop
 and your workstation, if you have both. Each machine you "own" should have its
@@ -164,13 +160,22 @@ identities in an "authentication agent" for easy use. They are usually added the
 first time they are used and then kept during the session. You can inspect and
 modify this list of keys with the command `ssh-add`.
 
-> ## Note for OSX users
-> On MacOSX you need to add the following lines to the configuration file to
-> enable agent forwarding:
-> ```
-> UseKeychain yes
-> AddKeysToAgent yes
-> ```
-> (see [this note](https://developer.apple.com/library/archive/technotes/tn2449/_index.html)
-> for technical details)
-{: .callout}
+```{note} Note for OSX users
+On MacOSX you need to add the following lines to the configuration file to
+enable agent forwarding:
+```
+UseKeychain yes
+AddKeysToAgent yes
+```
+(see [this note](https://developer.apple.com/library/archive/technotes/tn2449/_index.html)
+for technical details)
+```
+
+```{admonition} Key Points
+:class: tip
+- `ssh-keygen` can be used to create private/public key pairs for authentication
+- `ssh-copy-id` can be used to copy the public key to the server to enable login via the private key
+- Which keys to use for which server can be configured in the configuration file
+- Agent forwarding can be used to make your local private keys available on the server you connect
+- `ssh-add` allows you to add, list or remove identities from the agent
+```

@@ -12,14 +12,14 @@
 
 # Comment to be posted to on first time issues
 newIssueWelcomeComment: >
-  Thanks for opening your first issue here 💖! If you have any questions, feel free to mention one of the conveners, previous contributors, or attend our weekly meeting (see https://hepsoftwarefoundation.org/workinggroups/training.html).  Also, sometimes issues go unnoticed, so don't hesitate to @mention some of us, if we do not come back to you within a few days.
+  Thanks for opening your first issue here 💖! If you have any questions, feel free to mention one of the conveners, previous contributors, or attend our weekly meeting (see https://hepsoftwarefoundation.org/activities/training.html).  Also, sometimes issues go unnoticed, so don't hesitate to @mention some of us, if we do not come back to you within a few days.
 
 # Configuration for new-pr-welcome - https://github.com/behaviorbot/new-pr-welcome
 
 # Comment to be posted to on PRs from first time contributors in your repository
 newPRWelcomeComment: >
   Thanks for opening your first pull request here 🚀! If you have any questions, feel free to mention one of the conveners, previous contributors, or attend our weekly meeting (see
-   [our homepage](https://hepsoftwarefoundation.org/workinggroups/training.html)).  Also, sometimes PRs go unnoticed, so don't hesitate to @mention some of us, if we do not come back to you within a few days.
+   [our homepage](https://hepsoftwarefoundation.org/activities/training.html)).  Also, sometimes PRs go unnoticed, so don't hesitate to @mention some of us, if we do not come back to you within a few days.
 
 # Configuration for first-pr-merge - https://github.com/behaviorbot/first-pr-merge
 

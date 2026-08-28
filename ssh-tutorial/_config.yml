@@ -1,0 +1,67 @@
+# Jupyter Book Configuration
+# Learn more at https://jupyterbook.org/v1/customize/config.html
+
+# Book settings
+title: "Introduction to SSH"
+author: "HSF Training"
+logo: "fig/hsf-logo.png"
+copyright: "2025"
+
+# Force re-execution of notebooks on each build.
+execute:
+  execute_notebooks: off
+
+# Define the name of the latex output file for PDF builds
+latex:
+  latex_documents:
+    targetname: hsf-training-ssh.tex
+
+# Add a bibtex file so that we can create citations
+# bibtex_bibfiles: []
+
+# Information about where the book exists on the web
+repository:
+  url: https://github.com/hsf-training/hsf-training-ssh-webpage
+  path_to_book: ""
+  branch: gh-pages
+
+# HTML-specific settings
+html:
+  favicon: ""
+  use_edit_page_button: true
+  use_repository_button: true
+  use_issues_button: true
+  baseurl: https://hsf-training.github.io/hsf-training-ssh-webpage/
+  extra_footer: |
+    <p>
+    This training module is part of the <a href="https://hepsoftwarefoundation.org/training/curriculum">HEP Software Foundation Training Curriculum</a>.
+    </p>
+
+# Sphinx configuration
+sphinx:
+  config:
+    html_theme_options:
+      repository_url: https://github.com/hsf-training/hsf-training-ssh-webpage
+      use_repository_button: true
+      use_issues_button: true
+      use_edit_page_button: true
+    html_last_updated_fmt: "%b %d, %Y"
+    #mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+# Launch button settings (optional)
+launch_buttons:
+  notebook_interface: "classic"
+  binderhub_url: ""
+
+# Parse and render MyST markdown
+parse:
+  myst_enable_extensions:
+    - colon_fence
+    - deflist
+    - dollarmath
+    - html_admonition
+    - html_image
+    - linkify
+    - replacements
+    - smartquotes
+    - substitution

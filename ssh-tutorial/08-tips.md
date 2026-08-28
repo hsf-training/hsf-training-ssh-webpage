@@ -1,14 +1,9 @@
----
-title: "Additional tips & tricks"
-teaching: 0
-exercises: 0
-questions:
-objectives:
-- "Use `rsync` to copy large/many files"
-- "Use tmux to keep your sessions alive and for tiling your terminal."
-keypoints:
-- "There's a lot to be discovered!"
----
+# Additional tips & tricks
+
+```{admonition} Learning Objectives
+- Use `rsync` to copy large/many files
+- Use tmux to keep your sessions alive and for tiling your terminal
+```
 
 By now you hopefully know all the things necessary to comfortably work with ssh
 and configure it to your liking. There are a few more things that can make
@@ -32,7 +27,7 @@ rsync -vaz server:/folder/ localfolder
 
 which will efficiently copy everything in `folder` on `server` and put it in
 the directory `localfolder` (beware, it matters whether or not you put a slash
-at the end of the target)/ The most common options are
+at the end of the target). The most common options are
 
 | Option     | Explanation |
 | ---------- | ----------- |
@@ -61,12 +56,11 @@ local files. For example
 * on Linux when using Gnome in the file browser there is a "+ Other locations"
   in left pane at the bottom. This should bring up a "Connect to Server" field
   where you can enter any ssh host in the form `ssh://username@host/folder` and
-  gnome will let you see the files on that host. See `here
-  <https://help.gnome.org/users/gnome-help/stable/nautilus-connect.html.en>`_ for
+  gnome will let you see the files on that host. See [here](https://help.gnome.org/users/gnome-help/stable/nautilus-connect.html.en) for
   more information but this works similar in other desktop environments.
 * In addition many editors or development environments have their own support to
   work on a remote machine via ssh. There is a
-  `guide on confluence <https://confluence.desy.de/x/XGJ8Cg>`_
+  [guide on confluence](https://confluence.desy.de/x/XGJ8Cg)
   explaining the setup for some of them.
 
 ## SSH multiplexing
@@ -78,9 +72,9 @@ authentication doesn't work. All we have to do is put the following in the
 configuration file
 
 ```
-ControlMaster auto
-ControlPath ~/.ssh/%r@%h:%p.control
-ControlPersist 30m
+ ControlMaster auto
+ ControlPath ~/.ssh/%r@%h:%p.control
+ ControlPersist 30m
 ```
 
 And when connecting ssh will automatically create a control path that can be
@@ -102,30 +96,23 @@ where you have administration privileges but then it allows to use ssh to
 transparently connect your whole laptop to the network. This is then basically
 identical to a VPN connection.
 
-<!-- ## Location aware SSH config file
-
-Sometimes you want to have your SSH config depend on where you are with your
-laptop. For example, while at KEK you don't need to jump through the gateway.
-This is indeed possible and explained in detail on `B2 Questions
-<https://questions.belle2.org/question/1247/sshconfig-dependent-on-network/>`_. -->
-
 ## Using a terminal multiplexer (e.g. tmux, screen)
 
-When you loose your ssh connection or your terminal window is closed, all
+When you lose your ssh connection or your terminal window is closed, all
 processes that had been running in that terminal are also killed. This can
 be frustrating if it is a long-running process such compilation or a dataset
 download.
 
-To avoid this you can use a [terminal multiplexer](https://en.wikipedia.org/wiki/Terminal_multiplexer>)
+To avoid this you can use a [terminal multiplexer](https://en.wikipedia.org/wiki/Terminal_multiplexer)
 program such as [GNU screen](https://www.gnu.org/software/screen/) or the newer and more
 feature-rich [tmux](https://github.com/tmux/tmux/wiki).
 Both are
 pre-installed on KEKCC and NAF.
 
-> ## Hint
-> For computational jobs like processing a steering file, use a
-> batch submission system instead (see :ref:`this warning <batch system recommendation warning>`).
-{: .callout}
+```{note} Hint
+For computational jobs like processing a steering file, use a
+batch submission system instead.
+```
 
 These programs create one or multiple new terminal sessions within your
 terminal, and these sessions run independently of the original terminal, even
@@ -141,15 +128,15 @@ session. A terminal multiplexer allows for example to
   Think of it like having multiple remote "tabs". Tmux can also act as a
   terminal window manager and arrange them side-by-side. This can be useful e.g.
   for running a process in one pane and monitoring the processor load via
-  [htop](<https://htop.dev/)
+  [htop](https://htop.dev/)
 
-<figure>
-<img src="{{site.baseurl}}/fig/tmux_on_kekcc.png"/>
-<figcaption>
-  Tmux running in the local terminal and on KEKCC with multiple windows and
-  panes.
-</figcaption>
-</figure>
+```{figure} fig/tmux_on_kekcc.png
+---
+name: tmux-kekcc
+---
+Tmux running in the local terminal and on KEKCC with multiple windows and
+panes.
+```
 
 If you don't know either programs yet: learn how to use (the newer) tmux.
 Check out the official [getting started guide](https://github.com/tmux/tmux/wiki/Getting-Started)
@@ -168,7 +155,7 @@ bookmarks. The commands that you need for the most basic use-case are
     resources like login nodes.
 * `tmux detach` Detaches the current tmux session, so that you return your original
     terminal session, but the tmux session keeps running in the background.
-    This happens automatically when you loose your connection or your terminal
+    This happens automatically when you lose your connection or your terminal
     is closed.
 * `tmux attach`. Short form: `tmux a`.
     Attaches a running but detached tmux session. When you log into a cluster
@@ -182,51 +169,7 @@ for example if you want to have multiple windows (tmux "tabs") and panes in a
 tmux. To see those, check out the documentation links above, where you will
 also find keyboard shortcuts for most of them.
 
-<!-- .. admonition:: Question
-   :class: exercise stacked
-
-   Why should I keep track of the exact host on which the terminal multiplexer
-   is run and how do I do that?
-
-.. admonition:: Hint
-   :class: toggle xhint stacked
-
-   Check out the output of the `hostname` command in a computing cluster like
-   KEKCC. Why is it different from the hostname that you used to login (the
-   `Hostname` line in your :ref:`ssh config <online_book/prerequisites/ssh:SSH
-   Configuration File>`)? Could you have found out the host name without typing
-   any commands? How can you change the specific host?
-
-.. admonition:: Solution
-   :class: toggle solution
-
-   When you connect to a computing cluster like KEKCC via a login node, e.g.
-   `login.cc.kek.jp`, you are connected to a random host (also called "node",
-   i.e. an individual server) in that cluster for load-balancing purposes.
-   You can check the full host name with the `hostname` command. But you
-   can also see the first part of the hostname (the current node)
-   in your shell prompt (the string at the beginning of the command line).
-
-   If you disconnect and reconnect to the login node, you can be connected to a
-   different node, but your terminal multiplexer will still be running on the
-   old host, so you will have to connect to that specific host which it is
-   running on. From within the computing cluster, you can usually just use the
-   node name for the ssh connection. For example, if your tmux session is
-   running on `ccw01.cc.kek.jp`, but you have been connected to `ccw02`,
-   from there you can simply use
-
-   .. code-block:: bash
-
-       ssh ccw01
-
-   to connect to the other node. Alternatively, you
-   can directly connect to a specific host instead of the login node, but for
-   that you might need to extend your :ref:`ssh config
-   <online_book/prerequisites/ssh:SSH Configuration File>` to also use a
-   gateway server for the specific nodes in the cluster, e.g. for the KEKCC:
-
-   .. literalinclude:: ssh_config.txt
-      :lines: 31-35
-      :linenos:
-
-   Then `ssh ccw01` will also work from outside KEKCC. -->
+```{admonition} Key Points
+:class: tip
+- There's a lot to be discovered!
+```

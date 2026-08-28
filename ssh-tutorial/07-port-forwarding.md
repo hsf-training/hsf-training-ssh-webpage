@@ -1,20 +1,10 @@
----
-title: "Port forwarding"
-teaching: 0
-exercises: 0
-questions:
-- "How can I connect to Jupyter notebook running on the server?"
-- "How can I connect to a website tunnelling to a server?"
-objectives:
-- "Forward ports"
-keypoints:
-- "each network connection consists of a host and a port number"
-- "port forwarding allows to connect to other services via ssh"
-- "`ssh -L localport:remotehost:remoteport server` will forward all connections
-  to `localport` on the local machine to whatever is called   `remotehost` at
-  port `remoteport` on `server`"
-- "this allows to open jupyter notebooks on kekcc or other computing centers"
----
+# Port forwarding
+
+```{admonition} Learning Objectives
+- Forward ports through SSH
+- Connect to Jupyter notebook running on a server
+- Connect to a website tunneling through a server
+```
 
 One of the last topics we need to discuss is the ability of SSH to do port
 forwarding. For this we first need to quickly explain what a port is: In
@@ -55,39 +45,40 @@ can open a port at any given time and you can only use ports above 1024 unless
 you have administrator privileges. 8080 is a "typical" port used for forwardings
 and is usually free. But any number is fine.
 
-> ## Question
-> How would the command look like if I want to open https://software.belle2.org
-> via a connection to `bastion.desy.de`? What do I need to type in my
-> web browser?
-> > ## Hint
-> > Make sure to choose the correct port
-> {: .solution}
-> > ## Solution
-> > We need to run `ssh -L 8080:software.belle2.org:443 desy` and then type
-> > `https://localhost:8080` in the browser.
-> {: .solution}
-{: .challenge}
+````{admonition} Question
+:class: tip
+How would the command look like if I want to open https://software.belle2.org
+via a connection to `bastion.desy.de`? What do I need to type in my
+web browser?
+```{dropdown} Hint
+Make sure to choose the correct port
+```
+```{dropdown} Solution
+We need to run `ssh -L 8080:software.belle2.org:443 desy` and then type
+`https://localhost:8080` in the browser.
+```
+````
 
 
-### Programs that open ports on the target machine
+## Programs that open ports on the target machine
 
 One special case is running programs on the other side that directly open a port
 on the machine you're working on for you to connect. The most prominent example
-in our field are `Jupyter notebooks <https://jupyter.org/>`_ which offer a very
+in our field are [Jupyter notebooks](https://jupyter.org/) which offer a very
 nice python interface via web browser.
 
 
-> ## Warning
-> Opening a port is not user specific but opens the port visible to **all
-> users on the network**. So whenever you open a port to listen to connections
-> you should make sure it cannot be misused. Jupyter does this for you with
-> passwords or token strings so you don't need to worry in this specific case.
-{: .caution}
+```{danger}
+Opening a port is not user specific but opens the port visible to **all
+users on the network**. So whenever you open a port to listen to connections
+you should make sure it cannot be misused. Jupyter does this for you with
+passwords or token strings so you don't need to worry in this specific case.
+```
 
-> ## Weblogins
-> Some organizations like DESY offer direct weblogins (e.g. [for desy](https://confluence.desy.de/x/rJetC))
-> for Jupyter notebooks so you might have an easier solution at your fingertips.
-{: .callout}
+```{note} Weblogins
+Some organizations like DESY offer direct weblogins (e.g. [for desy](https://confluence.desy.de/x/rJetC))
+for Jupyter notebooks so you might have an easier solution at your fingertips.
+```
 
 Now you can tell jupyter notebooks which port to use but this time we run it on
 the KEKCC computers and there might be other users there so it can be a bit
@@ -126,3 +117,11 @@ the notebook (press `Ctrl-C`), disconnect ssh and try with a different number.
 If it is the same number you're all good and you can just copy-paste the full
 link (including the characters after `token=`) into your web browser and you
 should see a notebook interface open up.
+
+```{admonition} Key Points
+:class: tip
+- Each network connection consists of a host and a port number
+- Port forwarding allows to connect to other services via ssh
+- `ssh -L localport:remotehost:remoteport server` will forward all connections to `localport` on the local machine to whatever is called `remotehost` at port `remoteport` on `server`
+- This allows to open jupyter notebooks on kekcc or other computing centers
+```

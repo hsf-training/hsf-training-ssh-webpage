@@ -1,0 +1,24 @@
+# Table of Contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: index
+chapters:
+- file: setup
+  title: Setup
+- file: 01-introduction
+  title: Introduction
+- file: 02-basics
+  title: Basics
+- file: 03-nested
+  title: Nested SSH Connections (Optional)
+- file: 04-config
+  title: The config file
+- file: 05-keys
+  title: Key based authentication
+- file: 07-port-forwarding
+  title: Port forwarding
+- file: 08-tips
+  title: Additional tips & tricks
+- file: reference
+  title: Reference

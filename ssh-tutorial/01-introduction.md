@@ -1,18 +1,10 @@
----
-title: "Introduction"
-teaching: 0
-exercises: 0
-questions:
-- What is SSH?
-- How does SSH encrypt traffic?
-- What's a private/public key?
-objectives:
-- Understanding asymmetric cryptography
-keypoints:
-- "asymmetric cryptography has two keys, a private and a public key."
-- "it can be used to establish the identity of the owner of the private key."
-- "the private key should be kept as safe as possible."
----
+# Introduction
+
+```{admonition} Learning Objectives
+- Understand asymmetric cryptography
+- Learn what SSH is and how it encrypts traffic
+- Learn about private/public key pairs
+```
 
 Secure Shell (SSH) is a protocol to access other computers. It was invented in
 1995 to make the old methods more secure but, on first glance, it still behaves
@@ -30,8 +22,7 @@ you should know when working remotely.
 
 But first we need to talk a bit about security, especially encryption.
 
-Asymmetric Encryption
----------------------
+## Asymmetric Encryption
 
 One cornerstone technology of the current internet is asymmetric cryptography,
 or public-key cryptography. We all use it constantly
@@ -46,10 +37,12 @@ As an example, let's say we have two people, Alice and Bob, where Alice owns the
 Bob has the public key. Then, with this key pair, they can perform two things:
 
 
-<figure>
-<img src="{{site.baseurl}}/fig/asymmetric_encryption.png"/>
-<figcaption>The two use cases of public/private encryption using our very simple example.</figcaption>
-</figure>
+```{figure} fig/asymmetric_encryption.png
+---
+name: asymmetric-encryption
+---
+The two use cases of public/private encryption using our very simple example.
+```
 
 **Confidentiality**
    * Bob can send confidential information only intended for Alice by encrypting
@@ -68,25 +61,33 @@ Bob has the public key. Then, with this key pair, they can perform two things:
 
 Following this example, consider a string of numbers from `1435706`. Now for
 encryption, we could just "add" a value to each of these digits and take the
-modulus by 10 to get another digit, $$f_{k}(x) = (x + k) \bmod 10$$
+modulus by 10 to get another digit, 
 
-Now, if we choose as keys $$A=3$$ and $$B=7$$, then we can "encrypt" the
-message by applying $$f_A(x)$$ on each digit to get the encrypted message,
-`4768039`. And we can decrypt it again by applying $$f_B(x)$$ to get the
-original message, `1435706`. This also works by first applying $$f_B(x)$$
-and then $$f_A(x)$$.
+$$
+f_{k}(x) = (x + k) \bmod 10
+$$
+
+Now, if we choose as keys $A=3$ and $B=7$, then we can "encrypt" the
+message by applying $f_A(x)$ on each digit to get the encrypted message,
+`4768039`. And we can decrypt it again by applying $f_B(x)$ to get the
+original message, `1435706`. This also works by first applying $f_B(x)$
+and then $f_A(x)$.
 
 So, if we encrypt a message with one key, we need to use the other key to decrypt the
 message again and vice versa. Now, this example is obviously way too simple but
 it is actually rather close to the [RSA algorithm](https://en.wikipedia.org/wiki/RSA_(cryptosystem)) still used today.
 
 
-> ## Warning: Private means private!
-> While the public key can be shared freely, it is critical that the private
-> key remains private. If someone gains access to your private key they can
-> impersonate you in the digital world and get access to a lot of your
-> resources.
-{: .caution }
+```{danger} Private means private!
+While the public key can be shared freely, it is critical that the private
+key remains private. If someone gains access to your private key they can
+impersonate you in the digital world and get access to a lot of your
+resources.
+```
 
-
-{% include links.md %}
+```{admonition} Key Points
+:class: tip
+- Asymmetric cryptography has two keys, a private and a public key
+- It can be used to establish the identity of the owner of the private key
+- The private key should be kept as safe as possible
+```
