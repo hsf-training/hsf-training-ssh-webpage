@@ -14,22 +14,38 @@ This training module is part of an initiative of the [HEP Software foundation](h
 ## 🚀 Building the Book
 
 ### Local Development
+**Note**: This repository is built on Jupyter Book v1. Therefore, there are some dependencies which require an older version of Python As such, it is recommended to use a virtual environment to build the Book.
 
-1. **Install dependencies**:
+0. **Install Python 3.12 (if you have a newer version)**
+   Mac:
    ```bash
-   pip install -r requirements.txt
+   brew install python@3.12
    ```
 
-2. **Build the book**:
+1. **Set up the virtual environment**:
    ```bash
-   jupyter book build .
+   python3.12 -m venv .venv312
    ```
 
-3. **View the book**: Open `_build/html/index.html` in your browser, or serve it locally:
+   Then source it:
+   ```bash
+   source .venv312/bin/activate
+   ```
+
+2. **Install Jupyter Book**:
+   ```bash
+   pip install "jupyter-book < 2.0"
+   ```
+
+3. **Build the Book**
+   ```bash
+   jupyter-book build ssh-tutorial/
+   ```
+
+4. **View the book**: Open `_build/html/index.html` in your browser, or serve it locally:
    ```bash
    # Using Python's built-in server
-   cd _build/html
-   python -m http.server 8000
+   python -m http.server 8000 -d ssh-tutorial/_build/html
    ```
    Then navigate to `http://localhost:8000`
 
