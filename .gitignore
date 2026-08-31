@@ -17,6 +17,9 @@ vendor/
 .*history
 # Jupyter Book build outputs
 _build/
+# Virtual environments
+.venv*/
+
 # IDE
 .vscode/
 .idea/
