@@ -34,7 +34,7 @@ This training module is part of an initiative of the [HEP Software foundation](h
 
 2. **Install Jupyter Book**:
    ```bash
-   pip install "jupyter-book<1"
+   pip install "jupyter-book < 2.0"
    ```
 
 3. **Build the Book**
