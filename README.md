@@ -22,7 +22,7 @@ This training module is part of an initiative of the [HEP Software foundation](h
    brew install python@3.12
    ```
 
-1. **Set up the virutal environment**:
+1. **Set up the virtual environment**:
    ```bash
    python3.12 -m venv .venv312
    ```
