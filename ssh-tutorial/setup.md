@@ -206,7 +206,6 @@ ssh localhost
 
 # Addendum: Connecting to CERN or Fermilab
 
-
 These steps apply only if you belong to CMS or another collaboration.
 
 ### CERN (lxplus)
