@@ -19,7 +19,6 @@ vendor/
 _build/
 # Virtual environments
 .venv*/
-
 # IDE
 .vscode/
 .idea/
