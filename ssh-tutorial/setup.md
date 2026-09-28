@@ -23,9 +23,11 @@ SSH uses **asymmetric cryptography** — a *public key* you can share and a *pri
 Create your key pair:
 
 ```bash
-ssh-keygen -t ed25519 -C "your_email@example.com"
+ssh-keygen -C "your_email@example.com"
 ````
 
+This will generate a key with the default type. For OpenSSH 9.5 and newer, the default type is Ed25519,
+which uses elliptic curve cryptography.
 If `ed25519` is not available (for example, if you have an old OS or OpenSSH version):
 
 ```bash
@@ -70,7 +72,7 @@ If you are a CERN or Fermilab user, instructions on how to connect to those remo
 
 ---
 
-## Option 2: Using SSH Inside GitHub Codespaces (Highly Recommended)
+## Option 2: Using SSH Inside GitHub Codespaces (Recommended if you do not have access to a remote server)
 
 GitHub Codespaces provides a complete Linux environment in the cloud that already includes the **SSH client**.
 We have set up a Codespace in which you can connect to a mock ssh server if you lack access to a remote server.
