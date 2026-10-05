@@ -42,7 +42,7 @@ This training module is part of an initiative of the [HEP Software foundation](h
    jupyter-book build ssh-tutorial/
    ```
 
-4. **View the book**: Open `_build/html/index.html` in your browser, or serve it locally:
+4. **View the book**: Open `ssh-tutorial/_build/html/index.html` in your browser, or serve it locally:
    ```bash
    # Using Python's built-in server
    python -m http.server 8000 -d ssh-tutorial/_build/html
@@ -53,8 +53,8 @@ This training module is part of an initiative of the [HEP Software foundation](h
 
 To clean previous builds and rebuild from scratch:
 ```bash
-jupyter book clean .
-jupyter book build .
+jupyter-book clean ssh-tutorial/
+jupyter-book build ssh-tutorial/
 ```
 
 ## 📝 Content Structure
@@ -81,7 +81,7 @@ as well as to the list of contributors [below](#contributors-).
 2. **Edit the markdown files** in the root directory (not in `_episodes/` - those are archived)
 3. **Test your changes locally** using the build instructions above
 4. **Commit your changes** with a clear message
-5. **Submit a pull request** to the `jupyterbook` branch
+5. **Submit a pull request** to the `gh-pages` branch
 
 ### Pre-commit Hooks
 
@@ -107,7 +107,7 @@ This will check for:
 
 ## 🚢 Deployment
 
-The book is automatically built and deployed to GitHub Pages via GitHub Actions when changes are pushed to the `jupyterbook` branch. The workflow is defined in `.github/workflows/deploy.yml`.
+The book is automatically built and deployed to GitHub Pages via GitHub Actions when changes are pushed to the `gh-pages` branch. The workflow is defined in `.github/workflows/deploy.yml`.
 
 ## 📚 Jupyter Book vs Jekyll
 
