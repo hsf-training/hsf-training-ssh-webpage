@@ -121,7 +121,7 @@ Old Jekyll files are archived in `_jekyll_archive/` for reference.
 
 ## Authors
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)) who contributed to
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/en/reference/emoji-key/)) who contributed to
 the content of the lesson:
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
