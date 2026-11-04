@@ -1,0 +1,26 @@
+name: Check links
+
+on:
+  pull_request:
+  push:
+    branches: [gh-pages]
+  schedule:
+    - cron: "0 4 1 * *" # monthly, to catch links that break over time
+  workflow_dispatch:
+
+jobs:
+  lychee:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Check links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # Markdown sources by default. For built sites, consider checking the
+          # built HTML instead (build first, then point this at the output).
+          args: --no-progress "./**/*.md"
+          fail: true
+        env:
+          # Authenticated requests avoid GitHub rate limits.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
