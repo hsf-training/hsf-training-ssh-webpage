@@ -61,7 +61,7 @@ The two use cases of public/private encryption using our very simple example.
 
 Following this example, consider a string of numbers from `1435706`. Now for
 encryption, we could just "add" a value to each of these digits and take the
-modulus by 10 to get another digit, 
+modulus by 10 to get another digit,
 
 $$
 f_{k}(x) = (x + k) \bmod 10

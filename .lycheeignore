@@ -1,0 +1,6 @@
+# Works in a browser, but gnu.org rate-limits bots (429/403). Linked in 08-tips.md.
+https://www\.gnu\.org/software/screen/
+
+# Behind Cloudflare: loads in a browser, but returns 403 to GitHub runners.
+# Linked in setup.md (Fermilab LPC account request).
+https://www\.uscms\.org/uscms_at_work/computing/getstarted/getaccount_fermilab\.shtml

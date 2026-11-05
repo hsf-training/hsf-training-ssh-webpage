@@ -223,7 +223,7 @@ These steps apply only if you belong to CMS or another collaboration.
 ### Fermilab LPC (US-CMS)
 
 * Request account:
-  [http://www.uscms.org/uscms_at_work/computing/getstarted/getaccount_fermilab.shtml](http://www.uscms.org/uscms_at_work/computing/getstarted/getaccount_fermilab.shtml)
+  [https://www.uscms.org/uscms_at_work/computing/getstarted/getaccount_fermilab.shtml](https://www.uscms.org/uscms_at_work/computing/getstarted/getaccount_fermilab.shtml)
 * Connect:
 
   ```bash
@@ -231,4 +231,3 @@ These steps apply only if you belong to CMS or another collaboration.
   ```
 
 ---
-
